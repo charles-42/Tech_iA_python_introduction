@@ -40,3 +40,5 @@ def several_input_function():
         count+=1
     return count
     
+def randomize():
+    return uniform(0,1)
