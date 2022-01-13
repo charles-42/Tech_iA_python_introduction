@@ -1,7 +1,7 @@
 
 def child_file_function():
     print ("I'm a child file function")
-
+print(f"{__name__=}")
 
 # cette condition permet de distinguer le code qui s'execute quand on run le script (tout) 
 # du code qui s'execute quand on l'importe (le code qui  est en dehors de la condition)
@@ -22,6 +22,9 @@ if __name__ == "__main__":
     # J'ajoute le chemin de mon répertoire parent au "python path" 
     # qui est l'endroit ou la fonction import va chercher ce qu'elle est capable d'importer
     sys.path.insert(0, parentdir) 
+
+    from pprint import pprint
+    #pprint(sys.path)
 
     import Same_level
     print(Same_level.same_level_function("Child"))
